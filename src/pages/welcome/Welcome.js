@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./Welcome.scss";
 
 export default class Welcome extends Component {
     render() {
         return (
-            <div className="container" style={{paddingTop: "50px"}}>
+            <div className="container page-container">
                 Welcome Page
             </div>
         );
