@@ -31,7 +31,7 @@ export default class AppRoute extends Component {
                             </ul>
                         </div>
                     </nav>
-                    <Route path="/" component={Welcome} />
+                    <Route exact path="/" component={Welcome} />
                     <Route path="/templates" component={Templates} />
                     <Route path="/editor" component={Editor} />
                 </div>
