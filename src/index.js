@@ -9,7 +9,7 @@ import configStore from './common/configStore';
 import routeConfig from './common/routeConfig';
 import Root from './Root';
 import './../semantic/dist/semantic.min.css';
-
+import "react-table/react-table.css";
 
 const store = configStore();
 

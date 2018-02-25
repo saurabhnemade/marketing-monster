@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actions from './redux/actions';
+import { Header } from 'semantic-ui-react';
 
 export class DefaultPage extends Component {
   static propTypes = {
@@ -13,7 +14,7 @@ export class DefaultPage extends Component {
   render() {
     return (
       <div className="campaigns-default-page">
-        Page Content: campaigns/DefaultPage
+        <Header as='h2'>Campaigns</Header>        
       </div>
     );
   }

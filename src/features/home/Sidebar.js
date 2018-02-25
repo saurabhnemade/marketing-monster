@@ -23,7 +23,7 @@ export default class Sidebar extends Component {
           <Menu.Item name="templates" active={activeItem === 'templates'} onClick={this.handleItemClick.bind(this, "/templates")}>
             Templates
           </Menu.Item>
-          <Menu.Item name="campaign" active={activeItem === 'campaign'} onClick={this.handleItemClick.bind(this, "/campaign")}>
+          <Menu.Item name="campaign" active={activeItem === 'campaign'} onClick={this.handleItemClick.bind(this, "/campaigns")}>
             Campaign
           </Menu.Item>
           <Menu.Item name="users" active={activeItem === 'users'} onClick={this.handleItemClick.bind(this, "/users")}>
