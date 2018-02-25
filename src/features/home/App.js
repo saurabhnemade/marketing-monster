@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Icon } from 'semantic-ui-react';
 import { Row, Col } from 'react-flexbox-grid';
+import Header from "./Header";
+import Sidebar from "./Sidebar";
+import Footer from "./Footer";
 
 /*
   This is the root component of your app. Here you define the overall layout
@@ -20,32 +23,18 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Row middle="xs" style={{backgroundColor: "#1E88E5"}}>
-          <Col xs={12} sm={3} md={2} lg={10}>
-            Logo
-          </Col>
-          <Col lg={2}>
-            <Row>
-              <Col>
-                <div>
-                  <Icon name="user circle" size="big" inverted={true}/>
-                </div>
-              </Col>
-              <Col>
-                <Button
-                  color="red"
-                  content="Like"
-                  icon="heart"
-                  label={{ basic: true, color: 'red', pointing: 'left', content: '2,048' }}
-                />
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-        <div className="home-app">{this.props.children}</div>
-        <div>
-          Made with <Icon name="heart" color="red" /> from @saurabhnemade
+        <Header />
+
+        <div style={{display: "flex", flexDirection: "row", minHeight: "calc(100vh - 47px)"}}>
+           <div style={{width: "100px"}}>
+             <Sidebar />
+           </div>
+           <div style={{flex: 1, overflow: "auto"}}>
+              {this.props.children}
+           </div>
         </div>
+        
+        <Footer />
       </div>
     );
   }
